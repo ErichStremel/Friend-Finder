@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>TV Show Friend Finder</h1>
+            <h4>Answer the questions on the survery to find out which TV character you should be friends with.</h4>
+            <hr>
+            <a href="/"><button type="button" class="btn btn-dark">Home</button></a>
+            <button type="submit" class="btn btn-dark" id="submitButton">Submit</button>
+        </div>
+
+        <p><a href="/api/friends">API Friends List</a></p>
+        <p><a href="https://github.com/ErichStremel/Friend-Finder">GitHub Repo</a></p>
+
+        <h3>About You</h3>
+        <h4>Name(required)</h4>
+        <input type="text" id="name" class="form-control" required>
+
+       
+        <h4>Your Photo Link(required)</h4>
+        <input type="text" id="photo" class="form-control" required>
+
+        <div class="container">
+            <div class="row">
+                <div class="input-field col s12">
+                    <h3>Question 1</h3>
+                    <h5>Do you enjoy scary movies?</h5>
+                    <select id="question1" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 2</h3>
+                    <h5>You prefer to be inside rather than outdoors.</h5>
+                    <select id="question2" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 3</h3>
+                    <h5>You believe you are destined for world domination.</h5>
+                    <select id="question3" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 4</h3>
+                    <h5>You prefer to have more friends, rather than few good friends.</h5>
+                    <select id="question4" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 5</h3>
+                    <h5>You would prefer to have a job that makes a lot of money vs a job that makes you happy.</h5>
+                    <select id="question5" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 6</h3>
+                    <h5>You would rather manage people than be managed.</h5>
+                    <select id="question6" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 7</h3>
+                    <h5>You enjoy long walks on the beach.</h5>
+                    <select id="question7" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 8</h3>
+                    <h5>The cookie part of an Oreo is better than the cream part.</h5>
+                    <select id="question8" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 9</h3>
+                    <h5>You enjoy really spicy food.</h5>
+                    <select id="question9" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="input-field col s12">
+                    <h3>Question 10</h3>
+                    <h5>You are very close to your immediately and distant relatives.</h5>
+                    <select id="question10" class="select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+               
+            </div>
+           
+        </div>
+        <div class="modal" tabindex="-1" role="dialog" id="results-modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Best Match!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="match-name"></h2>
+                        <img id="match-image" height= "300px" width="400px" src="https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/episodes/6/game-of-thrones-6-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        $("#submitButton").on("click", function(event) {
+            event.preventDefault();
+            var validateForm = function() {
+                var isValid = true;
+                $(".form-control").each(function() {
+                    if ($(this).val() === "") {
+                        isValid = false
+                    }
+                })
+                $(".select").each(function() {
+                    if ($(this).val() === "") {
+                        isValid = false
+                    }
+                })
+                return isValid;
+            }
+            if (validateForm()) {
+                var userData = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#question1").val(),
+                        $("#question2").val(),
+                        $("#question3").val(),
+                        $("#question4").val(),
+                        $("#question5").val(),
+                        $("#question6").val(),
+                        $("#question7").val(),
+                        $("#question8").val(),
+                        $("#question9").val(),
+                        $("#question10").val()
+                    ]
+                }
+                $.post("/api/friends", userData, function(data){
+                    $("#match-name").text(data.name);
+                    $("#match-image").attr("src", data.photo);
+                    $("#results-modal").modal("toggle")
+                })
+            } else {
+                alert("Please complete all fields before submitting.")
+            }
+        })
+
+        </script>
+</body>
+
+</html>

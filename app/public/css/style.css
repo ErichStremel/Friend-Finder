@@ -1,0 +1,35 @@
+h1 {
+    font-size: 80px;
+}
+
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+body {
+    
+    background: black;
+}
+
+.container {
+    background:white;
+    font-family: 'Staatliches', cursive;
+
+}
+.jumbotron {
+    text-align: center;
+    background-image: url(./background1.jpg);
+    color: white;
+    font-family: 'Staatliches', cursive;
+ 
+}
+
+.row {
+font-size: 20px;
+}
+
+.modal {
+    text-align: center;
+}
